@@ -18,7 +18,7 @@ To run the webpack development server (with live editing support)
     npm install
     npm start
 
-To build the `bundle.js` file for regular usage
+To build the `bundle.js` file for regular usage (without any optimization / minification)
 
 	npm run build
 
