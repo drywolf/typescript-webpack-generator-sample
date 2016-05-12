@@ -1,0 +1,38 @@
+{
+  "name": "typescript-webpack-generator-sample",
+  "version": "1.0.0",
+  "description": "Builds a minimalistic ES6 generator code sample with the help of TypeScript and webpack",
+  "main": "webpack.config.js",
+  "scripts": {
+	"prebuild:fix-ts-loader": "xcopy /Y fixes\\awesome-typescript-loader\\index.js node_modules\\awesome-typescript-loader\\dist.babel\\index.js",
+    "build": "npm run prebuild:fix-ts-loader && webpack --config webpack.config.js",
+    "start": "npm run prebuild:fix-ts-loader && opener http://localhost:8181/ && webpack-dev-server --config webpack.config.js --hot --inline --host 0.0.0.0 --port 8181",
+	"freeze": "npm shrinkwrap --dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drywolf/typescript-webpack-generator-sample.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drywolf/typescript-webpack-generator-sample/issues"
+  },
+  "homepage": "https://github.com/drywolf/typescript-webpack-generator-sample#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^0.17.0",
+    "babel-core": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-runtime": "^6.6.1",
+    "opener": "^1.4.1",
+    "typescript": "^1.8.10",
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "dependencies": {
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2"
+  }
+}

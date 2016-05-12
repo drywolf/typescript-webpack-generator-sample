@@ -1,0 +1,22 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "commonjs",
+		"sourceMap": true,
+		"jsx": "react",
+        "moduleResolution": "node",
+		"noLib": false
+    },
+    "awesomeTypescriptLoaderOptions": {
+        "target": "es6",
+        "useBabel": true
+    },
+    "filesGlob": [
+        "./sample.tsx",
+		"./typings/browser.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "bower_components"
+    ]
+}
